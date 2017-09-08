@@ -9,13 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    
     let names = ["Jay", "Mom", "Ashu", "Sadhana", "Bhramita"]
     
     @IBAction func coldCallButton(_ sender: UIButton) {
-        let randomNum = Int(arc4random_uniform(5))
+        let randomNum = Int(arc4random_uniform(5) + 1)
         print(randomNum)
-            nameLabel.text = names[randomNum]
+        nameLabel.text = names[randomNum - 1]
+        numberLabel.text = String(randomNum)
+        
+        if String(randomNum) == "1" || String(randomNum) == "2" {
+            numberLabel.textColor = UIColor.red
+        }
+        else if String(randomNum) == "3" || String(randomNum) == "4" {
+            numberLabel.textColor = UIColor.orange
+        }
+        else {
+            numberLabel.textColor = UIColor.green
+        }
     }
     
     override func viewDidLoad() {

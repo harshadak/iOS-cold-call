@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhz-Ho-1dH">
-                                <rect key="frame" x="46" y="589" width="283" height="34"/>
+                                <rect key="frame" x="46" y="585" width="283" height="38"/>
                                 <color key="backgroundColor" red="0.41471103955875466" green="0.97807949105434566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cold Call">
@@ -39,6 +39,12 @@
                                     <action selector="coldCallButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kX-I5-zVL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NW-eB-Cxi">
+                                <rect key="frame" x="66" y="216" width="243" height="49"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,11 +55,16 @@
                             <constraint firstItem="9Q8-eW-8wy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ZCp-11-flk"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Xhz-Ho-1dH" secondAttribute="bottom" constant="44" id="a2n-S1-dmI"/>
                             <constraint firstItem="9Q8-eW-8wy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQq-Am-lNK"/>
+                            <constraint firstItem="1NW-eB-Cxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="e15-xa-WGl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1NW-eB-Cxi" secondAttribute="trailing" constant="50" id="gle-0M-7Rs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xhz-Ho-1dH" secondAttribute="trailing" constant="30" id="hRy-xs-rGK"/>
+                            <constraint firstItem="Xhz-Ho-1dH" firstAttribute="top" secondItem="1NW-eB-Cxi" secondAttribute="bottom" constant="320" id="r9C-6b-zCL"/>
+                            <constraint firstItem="1NW-eB-Cxi" firstAttribute="top" secondItem="9Q8-eW-8wy" secondAttribute="bottom" constant="150" id="tSk-e0-ycI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="9Q8-eW-8wy" id="MTs-cV-iNh"/>
+                        <outlet property="numberLabel" destination="1NW-eB-Cxi" id="Kea-Md-lN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
